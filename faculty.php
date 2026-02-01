@@ -205,16 +205,18 @@
 
         .faculty-image {
             width: 120px;
-            height: 100px;
+            height: 120px;
             border-radius: 8px;
             overflow: hidden;
             flex-shrink: 0;
+            position: relative;
         }
 
         .faculty-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         .faculty-image-placeholder {
@@ -423,47 +425,53 @@
 
         <div class="faculty-grid">
             <?php
-            // Faculty data - Actual DSM Faculty
+            // Faculty data with photos
             $faculty = [
                 // Head of Department
-                ['name' => 'Dr. Saurabh Agrawal', 'designation' => 'Associate Professor & Head of Department', 'qualification' => 'B.E. (UOR, Roorkee), M. Tech. (IIT, Delhi), MBA (OSU, USA), PhD (DTU, Delhi), Ph.D', 'specialization' => 'Supply Chain Management, Reverse Logistics, Industrial Engineering, Data Analytics'],
+                ['name' => 'Dr. Saurabh Agrawal', 'designation' => 'Associate Professor & Head of Department', 'qualification' => 'B.E. (UOR, Roorkee), M. Tech. (IIT, Delhi), MBA (OSU, USA), PhD (DTU, Delhi), Ph.D', 'specialization' => 'Supply Chain Management, Reverse Logistics, Industrial Engineering, Data Analytics', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=saurabh', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/saurabh.jpg'],
                 
                 // Professors
-                ['name' => 'Prof. Pradeep Kumar Suri', 'designation' => 'Professor', 'qualification' => 'M.Tech, Ph.D', 'specialization' => 'E-Governance, Project Management, Quantitative Methods'],
-                ['name' => 'Prof. Rajan Yadav', 'designation' => 'Professor', 'qualification' => 'MBA, Ph.D', 'specialization' => 'Services Marketing, Sales and Distribution Management, Rural Marketing, Social Marketing, Retail Management'],
-                ['name' => 'Prof. Girish Chandra Maheshwari', 'designation' => 'Professor', 'qualification' => 'Ph.D', 'specialization' => 'Finance, Accounting and Strategy Area'],
-                ['name' => 'Prof. Neeraj Sharma', 'designation' => 'Adjunct Professor', 'qualification' => 'M Tech (IIT Kharagpur), PhD (IIT Delhi)', 'specialization' => 'Strategic Management, Human Resource Management, Organizational Behavior, Indian Knowledge Systems'],
+                ['name' => 'Prof. Pradeep Kumar Suri', 'designation' => 'Professor', 'qualification' => 'M.Tech, Ph.D', 'specialization' => 'E-Governance, Project Management, Quantitative Methods', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=pksuri', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/pradeepksuri.jpg'],
+                ['name' => 'Prof. Rajan Yadav', 'designation' => 'Professor', 'qualification' => 'MBA, Ph.D', 'specialization' => 'Services Marketing, Sales and Distribution Management, Rural Marketing, Social Marketing, Retail Management', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=rajanyadav', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/rajanyadav.jpg'],
+                ['name' => 'Prof. Girish Chandra Maheshwari', 'designation' => 'Professor', 'qualification' => 'Ph.D', 'specialization' => 'Finance, Accounting and Strategy Area', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=gcmaheshwari', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/gcmaheshwari.jpg'],
+                ['name' => 'Prof. Neeraj Sharma', 'designation' => 'Adjunct Professor', 'qualification' => 'M Tech (IIT Kharagpur), PhD (IIT Delhi)', 'specialization' => 'Strategic Management, Human Resource Management, Organizational Behavior, Indian Knowledge Systems', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=neerajsharma', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/neerajsharma.jpg'],
                 
                 // Associate Professors
-                ['name' => 'Dr. Archana Singh', 'designation' => 'Associate Professor', 'qualification' => 'MBA (Finance), Ph.D', 'specialization' => 'Corporate Finance, Financial Accounting, Security Analysis'],
-                ['name' => 'Dr. Shikha N Khera', 'designation' => 'Associate Professor', 'qualification' => 'MBA, NET, Ph.D', 'specialization' => 'Organizational Behaviour, Organizational Development'],
-                ['name' => 'Dr. Vikas Gupta', 'designation' => 'Associate Professor', 'qualification' => 'MBA, NET, Ph.D', 'specialization' => 'Knowledge Management, Innovation Management, Business Process Re-engineering, Corporate Social Responsibility'],
+                ['name' => 'Dr. Archana Singh', 'designation' => 'Associate Professor', 'qualification' => 'MBA (Finance), Ph.D', 'specialization' => 'Corporate Finance, Financial Accounting, Security Analysis', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=archanasingh1', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/archanasingh.jpg'],
+                ['name' => 'Dr. Shikha N Khera', 'designation' => 'Associate Professor', 'qualification' => 'MBA, NET, Ph.D', 'specialization' => 'Organisational Behaviour, Organizational Development', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=shikhankhera', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/shikhankhera1.jpg'],
+                ['name' => 'Dr. Vikas Gupta', 'designation' => 'Associate Professor', 'qualification' => 'MBA, NET, Ph.D', 'specialization' => 'Knowledge Management, Innovation Management, Business Process Re-engineering, Corporate Social Responsibility', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=vikasgupta', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/vikasgupta.jpg'],
                 
                 // Assistant Professors
-                ['name' => 'Dr. Abhinav Chaudhary', 'designation' => 'Assistant Professor', 'qualification' => 'B.E., MBA, NET (UGC), Ph.D', 'specialization' => 'International Marketing Management, Marketing of Services, Consumer Behaviour, Customer Relationship Management, Knowledge Management'],
-                ['name' => 'Dr. Deepali Malhotra', 'designation' => 'Assistant Professor', 'qualification' => 'M.Com., M. Phil, NET-JRF, Ph.D', 'specialization' => 'Strategy Management, International Business, Finance'],
-                ['name' => 'Dr. Deep Shree', 'designation' => 'Assistant Professor', 'qualification' => 'B.A. (Hons.) – Economics, MBA, NET-JRF, Ph.D', 'specialization' => 'Marketing, Not for Profit Marketing, Brand Management, Qualitative Research'],
-                ['name' => 'Dr. Mohit Beniwal', 'designation' => 'Assistant Professor', 'qualification' => 'B. E., MS in Information Systems, MBA, Ph.D', 'specialization' => 'Information Systems, Finance'],
-                ['name' => 'Mr. Yashdeep Singh', 'designation' => 'Assistant Professor', 'qualification' => 'B.E., MBA, NET', 'specialization' => 'Marketing Management, Information Technology Management'],
-                ['name' => 'Mr. Dhiraj Kumar Pal', 'designation' => 'Assistant Professor', 'qualification' => 'B.E, PGDM', 'specialization' => 'Marketing, Operations & SCM, Strategy'],
-                ['name' => 'Dr. Kusum Lata', 'designation' => 'Assistant Professor', 'qualification' => 'B.Tech (CSE), M.E (CTA), Ph.D (CSE)', 'specialization' => 'Data Mining, Machine Learning, Information Systems, Database Management Systems, Software Engineering'],
-                ['name' => 'Dr. Gaganmeet Kaur Awal', 'designation' => 'Assistant Professor', 'qualification' => 'B.Tech (CS), M.Tech (CS), Ph.D', 'specialization' => 'Machine Learning, Data Mining and DBMS, Web Analytics'],
-                ['name' => 'Dr. Meenakshi Ahlawat', 'designation' => 'Assistant Professor', 'qualification' => 'Ph.D', 'specialization' => ''],
-                ['name' => 'Ms. Renuka Prasad', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), M.Com, Ph.D. (Final Stage)', 'specialization' => 'Financial Accounting, Financial Reporting and analysis, cost accounting, management accounting, corporate laws, financial management, and sustainability'],
-                ['name' => 'Dr. Shelly Gupta', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), M.Com, Ph.D.', 'specialization' => 'Information System Adoption, Financial Inclusion, Consumer Behaviour, Mobile Financial Services'],
-                ['name' => 'Dr. Prama Vishnoi', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), M.Com, Ph.D.', 'specialization' => 'Bottom of the Pyramid (BoP) Markets, Consumer Behaviour, Subsistence Marketplaces'],
-                ['name' => 'Dr. Veenu Shankar', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), MBA, Ph.D.', 'specialization' => 'Environmental Responsibility, Green Behavior, Institutional Theory, Green Human Resource Management, Green Leadership, Business Ethics, CSR, CER, Sustainability'],
-                ['name' => 'Dr. Arushi Jain', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), M.Com, MA (Eco), Ph.D.', 'specialization' => 'Economics, Financial Management, Banking & Credit Risk, Systemic Risk, Economics, Corporate Finance, Financial Accounting, Cost accounting and Management accounting'],
-                ['name' => 'Dr. Yogesh Sharma', 'designation' => 'Assistant Professor', 'qualification' => 'BBS (SSCBS, DU), MBA (JMI), Ph.D. (JNU), JRF, SRF, UGC NET (Management and Commerce)', 'specialization' => 'Marketing, Subscription, Servitization, Green Marketing, Sustainability, AI, Data Analytics, Neural Networks, BRICS'],
-                ['name' => 'Dr. Rakesh Kumar Malviya', 'designation' => 'Assistant Professor', 'qualification' => 'B.E. (Mech. Engg.), M.E. (Industrial Engg. & Mgmt), Ph.D (SVNIT Surat)', 'specialization' => 'Supply Chain Management, Green SCM, Sustainable SCM, Digital SCM, Green Manufacturing, Reverse Logistics, Industry 4.0/5.0, Digitalization concepts, Sustainability etc.'],
+                ['name' => 'Dr. Abhinav Chaudhary', 'designation' => 'Assistant Professor', 'qualification' => 'B.E., MBA, NET (UGC), Ph.D', 'specialization' => 'International Marketing Management, Marketing of Services, Consumer Behaviour, Customer Relationship Management, Knowledge Management', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=abhinavchaudhary', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/abhinavchaudhary.jpg'],
+                ['name' => 'Dr. Deepali Malhotra', 'designation' => 'Assistant Professor', 'qualification' => 'M.Com., M. Phil, NET-JRF, Ph.D', 'specialization' => 'Strategy Management, International Business, Finance', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=deepali', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/deepali.jpg'],
+                ['name' => 'Dr. Deep Shree', 'designation' => 'Assistant Professor', 'qualification' => 'B.A. (Hons.) – Economics, MBA, NET-JRF, Ph.D', 'specialization' => 'Marketing, Not for Profit Marketing, Brand Management, Qualitative Research', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=deepshree', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/deepshree.jpg'],
+                ['name' => 'Dr. Mohit Beniwal', 'designation' => 'Assistant Professor', 'qualification' => 'B. E., MS in Information Systems, MBA, Ph.D', 'specialization' => 'Information Systems, Finance', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=mohitbeniwal', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/mohit.jpg'],
+                ['name' => 'Mr. Yashdeep Singh', 'designation' => 'Assistant Professor', 'qualification' => 'B.E., MBA, NET', 'specialization' => 'Marketing Management, Information Technology Management', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=yashdeep', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/yashdeep.jpg'],
+                ['name' => 'Mr. Dhiraj Kumar Pal', 'designation' => 'Assistant Professor', 'qualification' => 'B.E, PGDM', 'specialization' => 'Marketing, Operations & SCM, Strategy', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=dheeraj', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/dheeraj.jpg'],
+                ['name' => 'Dr. Kusum Lata', 'designation' => 'Assistant Professor', 'qualification' => 'B.Tech (CSE), M.E (CTA), Ph.D (CSE)', 'specialization' => 'Data Mining, Machine Learning, Information Systems, Database Management Systems, Software Engineering', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=kusumlata', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/kusumlata.jpg'],
+                ['name' => 'Dr. Gaganmeet Kaur Awal', 'designation' => 'Assistant Professor', 'qualification' => 'B.Tech (CS), M.Tech (CS), Ph.D', 'specialization' => 'Machine Learning, Data Mining and DBMS, Web Analytics', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=gaganmeetkaurawal', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/gaganmeetkaurawal.jpg'],
+                ['name' => 'Dr. Meenakshi Ahlawat', 'designation' => 'Assistant Professor', 'qualification' => 'Ph.D', 'specialization' => '', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=meenakshiahlawat', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/meenakshiahlawat.jpg'],
+                ['name' => 'Ms. Renuka Prasad', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), M.Com, Ph.D. (Final Stage)', 'specialization' => 'Financial Accounting, Financial Reporting and analysis, cost accounting, management accounting, corporate laws, financial management, and sustainability', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=renukaprasad', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/renukaprasad.jpg'],
+                ['name' => 'Dr. Shelly Gupta', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), M.Com, Ph.D.', 'specialization' => 'Information System Adoption, Financial Inclusion, Consumer Behaviour, Mobile Financial Services', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=shellygupta', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/shellygupta.jpg'],
+                ['name' => 'Dr. Prama Vishnoi', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), M.Com, Ph.D.', 'specialization' => 'Bottom of the Pyramid (BoP) Markets, Consumer Behaviour, Subsistence Marketplaces', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=pramavishnoi', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/pramavishnoi.jpg'],
+                ['name' => 'Dr. Veenu Shankar', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), MBA, Ph.D.', 'specialization' => 'Environmental Responsibility, Green Behavior, Institutional Theory, Green Human Resource Management, Green Leadership, Business Ethics, CSR, CER, Sustainability', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=veenushankar', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/veenushankar.jpg'],
+                ['name' => 'Dr. Arushi Jain', 'designation' => 'Assistant Professor', 'qualification' => 'B.Com (Hons.), M.Com, MA (Eco), Ph.D.', 'specialization' => 'Economics, Financial Management, Banking & Credit Risk, Systemic Risk, Economics, Corporate Finance, Financial Accounting, Cost accounting and Management accounting', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=arushijain', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/arushijain.jpg'],
+                ['name' => 'Dr. Yogesh Sharma', 'designation' => 'Assistant Professor', 'qualification' => 'BBS (SSCBS, DU), MBA (JMI), Ph.D. (JNU), JRF, SRF, UGC NET (Management and Commerce)', 'specialization' => 'Marketing, Subscription, Servitization, Green Marketing, Sustainability, AI, Data Analytics, Neural Networks, BRICS', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=yogeshsharma', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/yogeshsharma.jpg'],
+                ['name' => 'Dr. Rakesh Kumar Malviya', 'designation' => 'Assistant Professor', 'qualification' => 'B.E. (Mech. Engg.), M.E. (Industrial Engg. & Mgmt), Ph.D (SVNIT Surat)', 'specialization' => 'Supply Chain Management, Green SCM, Sustainable SCM, Digital SCM, Green Manufacturing, Reverse Logistics, Industry 4.0/5.0, Digitalization concepts, Sustainability etc.', 'profile_link' => 'https://dtu.ac.in/modules/faculty_profile_new/faculty_index.php?uname=rakeshkumarmalviya', 'photo' => 'https://dtu.ac.in/Web/Departments/DSM/faculty_v2/images/rakeshkumarmalviya.jpg'],
             ];
 
             foreach ($faculty as $member): ?>
             <div class="faculty-card">
                 <div class="faculty-image">
-                    <div class="faculty-image-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
+                    <?php if (!empty($member['photo'])): ?>
+                        <img src="<?php echo htmlspecialchars($member['photo']); ?>" 
+                             alt="<?php echo htmlspecialchars($member['name']); ?>"
+                             loading="lazy">
+                    <?php else: ?>
+                        <div class="faculty-image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="faculty-info">
                     <h3><?php echo htmlspecialchars($member['name']); ?></h3>
@@ -473,7 +481,7 @@
                     <p class="specialization"><strong>Specialization:</strong> <?php echo htmlspecialchars($member['specialization']); ?></p>
                     <?php endif; ?>
                 </div>
-                <a href="#" class="faculty-link">
+                <a href="<?php echo htmlspecialchars($member['profile_link']); ?>" target="_blank" class="faculty-link" title="View Profile">
                     <i class="fas fa-link"></i>
                 </a>
             </div>

@@ -618,7 +618,7 @@
     <!-- Welcome Section -->
     <div class="welcome-section">
         <div class="welcome-header">
-            <img src="https://via.placeholder.com/120" alt="HOD" class="hod-image">
+            <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_0_1769967656838.png')); ?>" alt="Dr. Saurabh Agrawal - HOD" class="hod-image">
             <div class="welcome-text">
                 <h3>Welcome to Delhi School of Management, Delhi Technological University</h3>
                 <p>DSM is committed to delivering high-quality management education through a strong blend of academics, industry engagement, and research excellence.</p>
@@ -638,21 +638,21 @@
         <h2 class="section-title">RECENT EVENTS</h2>
         <div class="events-grid">
             <div class="event-card">
-                <img src="https://via.placeholder.com/100" alt="Event" class="event-image">
+                <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_1_1769967656838.png')); ?>" alt="Event" class="event-image">
                 <div class="event-content">
                     <p>Delhi School of Management organized an enlightening guest lecture on 'AI in Business' by Commissioner, Income Tax Department. The session explored how Artificial Intelligence is transforming business operations.</p>
                 </div>
             </div>
 
             <div class="event-card">
-                <img src="https://via.placeholder.com/100" alt="Event" class="event-image">
+                <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_3_1769967656838.png')); ?>" alt="Event" class="event-image">
                 <div class="event-content">
                     <p>The Delhi School of Management, Delhi Technological University, successfully organized an insightful guest lecture on the topic 'FMCG Product Management' by Mr. Sarthak Mahajan, Product Planning and Development, V-Guard.</p>
                 </div>
             </div>
 
             <div class="event-card">
-                <img src="https://via.placeholder.com/100" alt="Event" class="event-image">
+                <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_0_1769967737479.png')); ?>" alt="Event" class="event-image">
                 <div class="event-content">
                     <p>Delhi School of Management, DTU, recently had the privilege of hosting an insightful expert lecture on the topic 'Decoding the Evolving Landscape of Indian Markets.' We were honored to have the esteemed Dr. Rajeev Lath, a GBI Smart Trainer, as our speaker.</p>
                 </div>
@@ -665,7 +665,7 @@
         <h2 class="section-title">LEARNERS TO LEADERS</h2>
         <div class="leaders-grid">
             <div class="leader-card">
-                <img src="https://via.placeholder.com/80" alt="Leader" class="leader-image">
+                <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_1_1769967737479.png')); ?>" alt="Leader" class="leader-image">
                 <div class="leader-info">
                     <h4>Prof Prateek Sharma</h4>
                     <p>Prof Prateek Sharma received his Ph. D. degree in Environmental Engineering from Department of Civil Engineering, Indian Institute of Technology, New Delhi. He is currently working as Associate Professor in Engineering Department, Delhi College of Engineering, Delhi.</p>
@@ -673,7 +673,7 @@
             </div>
 
             <div class="leader-card">
-                <img src="https://via.placeholder.com/80" alt="Leader" class="leader-image">
+                <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_2_1769967656838.png')); ?>" alt="Leader" class="leader-image">
                 <div class="leader-info">
                     <h4>Pawan Kumar Sharma</h4>
                     <p>Pawan Kumar Sharma is among the few or may be the only one to have done his graduation, post graduation and even doctorate from the same institution. He was selected for the prestigious and highly coveted Indian Administrative Services (IAS).</p>
@@ -681,7 +681,7 @@
             </div>
 
             <div class="leader-card">
-                <img src="https://via.placeholder.com/80" alt="Leader" class="leader-image">
+                <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_1_1769967737479.png')); ?>" alt="Leader" class="leader-image">
                 <div class="leader-info">
                     <h4>Dr Vinod Mehra</h4>
                     <p>Dr Vinod Mehra received his B. Tech degree in Mech Engg in 1969 and joined DCE as faculty in the year 1972. He served as Head of Mechanical Engineering Department and was sabbatical by DCE. He later on took over as a Professor and retired in 2006.</p>
