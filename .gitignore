@@ -1,0 +1,46 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# PHP
+*.cache
+
+# Database (if any)
+*.sql
+*.sqlite
+*.db
+
+# Environment files (if you add them later)
+.env
+.env.local
+
+# Backup files
+backup/
+*.backup
+
+# Setup and installation files (not needed on GitHub)
+setup_images.bat
+setup_complete.ps1
+COPY_IMAGES.bat
+IMAGE_SETUP.md
+DEPLOYMENT_CHECKLIST.md
+GITHUB_READY.md
+install.php
+database_schema.php
+config.php
+admin_panel.php
+admission.php
+application_form.php

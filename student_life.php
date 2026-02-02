@@ -203,7 +203,7 @@
 
         /* Month Banner */
         .month-banner {
-            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+            background: linear-gradient(135deg, #5dade2, #3498db);
             padding: 20px;
             text-align: center;
             border-radius: 8px;
@@ -355,7 +355,7 @@
     <header class="top-header">
         <div class="logo-section">
             <div class="logo-placeholder">
-                <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_1769887371671.png')); ?>" alt="DTU Logo" style="width: 80px; height: 80px; border-radius: 50%;">
+                <img src="images/logos/dtu_logo.png" alt="DTU Logo" style="width: 80px; height: 80px; border-radius: 50%;">
             </div>
             <div class="university-info">
                 <h1>DELHI SCHOOL OF MANAGEMENT</h1>
@@ -429,7 +429,7 @@
             <!-- Industrial Visit -->
             <div class="event-card">
                 <div class="event-image">
-                    <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_0_1769860586160.png')); ?>" alt="Industrial Visit">
+                    <img src="images/student_life/industrial_visit.png" alt="Industrial Visit">
                 </div>
                 <div class="event-title">Industrial Visit</div>
             </div>
@@ -447,7 +447,7 @@
             <!-- Cultural Event -->
             <div class="event-card">
                 <div class="event-image">
-                    <img src="data:image/png;base64,<?php echo base64_encode(file_get_contents('C:/Users/ratho/.gemini/antigravity/brain/bf96d65a-9ab5-4083-962b-883167e3dd39/uploaded_media_1_1769860586160.png')); ?>" alt="Cultural Event">
+                    <img src="images/student_life/cultural_event.png" alt="Cultural Event">
                 </div>
                 <div class="event-title">Cultural Event</div>
             </div>
