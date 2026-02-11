@@ -138,7 +138,7 @@
 
         .nav-container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             max-width: 100%;
             padding: 0 20px;
@@ -147,6 +147,13 @@
         .main-nav ul {
             list-style: none;
             display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .apply-btn-container {
+            padding: 10px 0;
         }
 
         .main-nav li {
@@ -170,26 +177,11 @@
             background: #d35400;
         }
 
-        .apply-btn-nav {
-            background: #052963 !important;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 14px;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-
-        .apply-btn-nav:hover {
-            background: #0a3d8f !important;
-        }
-
         /* Main Layout */
         .main-container {
             display: flex;
-            margin-top: 155px;
-            min-height: calc(100vh - 155px);
+            margin-top: 180px;
+            min-height: calc(100vh - 180px);
         }
 
         /* Fixed Sidebar */
@@ -197,7 +189,7 @@
             width: 280px;
             background: #f0f0f0;
             position: fixed;
-            top: 155px;
+            top: 180px;
             left: 0;
             bottom: 0;
             overflow-y: auto;
@@ -530,7 +522,7 @@
             }
             
             .main-container {
-                margin-top: 220px;
+                margin-top: 250px;
             }
             
             .sidebar {
@@ -571,10 +563,10 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="social-icons">
-                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="twitter"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100065103819173" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/dtu_delhi" class="twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/delhi-technological-university-delhi-397129209/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/dtu.delhi/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </header>
@@ -583,14 +575,14 @@
     <nav class="main-nav">
         <div class="nav-container">
             <ul>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="admission_dtu.php" class="active">Admission</a></li>
                 <li><a href="placements.php">Placements</a></li>
                 <li><a href="student_life.php">Student Corner</a></li>
-                <li><a href="#">Hostel</a></li>
+                <li><a href="https://hostels.dtu.ac.in/" target="_blank">Hostel</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
             </ul>
-            <a href="application_form.php" class="apply-btn-nav">Apply here</a>
         </div>
     </nav>
 
@@ -681,7 +673,7 @@
                 </div>
 
                 <div class="apply-section">
-                    <button class="apply-btn-main" onclick="window.location.href='application_form.php'">Click here to Apply</button>
+                    <button class="apply-btn-main" onclick="window.open('https://www.cmacadmissions.com/', '_blank')">Apply for MBA General</button>
                 </div>
 
                 <div class="faq-section">
@@ -751,7 +743,7 @@
                 </div>
 
                 <div class="apply-section">
-                    <button class="apply-btn-main" onclick="window.location.href='application_form.php'">Click here to Apply</button>
+                    <button class="apply-btn-main" onclick="window.open('https://dtu.ac.in', '_blank')">Apply for MBA-BA</button>
                 </div>
 
                 <div class="faq-section">
@@ -820,7 +812,7 @@
                 </div>
 
                 <div class="apply-section">
-                    <button class="apply-btn-main" onclick="window.location.href='application_form.php'">Click here to Apply</button>
+                    <button class="apply-btn-main" onclick="window.open('https://dtu.ac.in', '_blank')">Apply for MBA-IEV</button>
                 </div>
 
                 <div class="faq-section">
@@ -891,7 +883,7 @@
                 </div>
 
                 <div class="apply-section">
-                    <button class="apply-btn-main" onclick="window.location.href='application_form.php'">Click here to Apply</button>
+                    <button class="apply-btn-main" onclick="window.open('https://dtu.ac.in', '_blank')">Apply for Executive MBA</button>
                 </div>
 
                 <div class="faq-section">

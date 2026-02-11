@@ -570,11 +570,12 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <ul>
+            <li><a href="index.php" class="active">Home</a></li>
             <li><a href="about.php">About Us</a></li>
             <li><a href="admission_dtu.php">Admission</a></li>
             <li><a href="placements.php">Placements</a></li>
             <li><a href="student_life.php">Student Corner</a></li>
-            <li><a href="#">Hostel</a></li>
+            <li><a href="https://hostels.dtu.ac.in/" target="_blank">Hostel</a></li>
             <li><a href="gallery.php">Gallery</a></li>
         </ul>
     </nav>
@@ -665,7 +666,7 @@
         <h2 class="section-title">LEARNERS TO LEADERS</h2>
         <div class="leaders-grid">
             <div class="leader-card">
-                <img src="images/home/leader2.png" alt="Leader" class="leader-image">
+                <img src="images/home/leader1.png" alt="Leader" class="leader-image">
                 <div class="leader-info">
                     <h4>Prof Prateek Sharma</h4>
                     <p>Prof Prateek Sharma received his Ph. D. degree in Environmental Engineering from Department of Civil Engineering, Indian Institute of Technology, New Delhi. He is currently working as Associate Professor in Engineering Department, Delhi College of Engineering, Delhi.</p>
@@ -673,7 +674,7 @@
             </div>
 
             <div class="leader-card">
-                <img src="images/home/leader1.png" alt="Leader" class="leader-image">
+                <img src="images/home/pawan.png" alt="Leader" class="leader-image">
                 <div class="leader-info">
                     <h4>Pawan Kumar Sharma</h4>
                     <p>Pawan Kumar Sharma is among the few or may be the only one to have done his graduation, post graduation and even doctorate from the same institution. He was selected for the prestigious and highly coveted Indian Administrative Services (IAS).</p>
@@ -696,6 +697,7 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="index.php">• Home</a></li>
                     <li><a href="about.php">• About Us</a></li>
                     <li><a href="student_life.php">• Student Corner</a></li>
                     <li><a href="admission_dtu.php">• Admission</a></li>

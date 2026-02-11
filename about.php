@@ -390,11 +390,12 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <ul>
+            <li><a href="index.php">Home</a></li>
             <li><a href="about.php" class="active">About Us</a></li>
             <li><a href="admission_dtu.php">Admission</a></li>
             <li><a href="placements.php">Placements</a></li>
             <li><a href="student_life.php">Student Corner</a></li>
-            <li><a href="#">Hostel</a></li>
+            <li><a href="https://hostels.dtu.ac.in/" target="_blank">Hostel</a></li>
             <li><a href="gallery.php">Gallery</a></li>
         </ul>
     </nav>
@@ -406,10 +407,7 @@
         <!-- Section 1 -->
         <div class="content-section">
             <div class="section-image rotated-left">
-                <div class="image-placeholder">
-                    <i class="fas fa-university"></i>
-                </div>
-                <!-- Replace with actual image: <img src="images/dsm-building.jpg" alt="Delhi School of Management"> -->
+                <img src="images/about/dtuu.jpg" alt="Delhi School of Management">
             </div>
             <div class="section-text">
                 <p>Delhi School of Management (DSM), established in 2009 after Delhi College of Engineering became Delhi Technological University (DTU), aims to develop socially responsible, ethical, and innovative managers. Building on DTU's seven-decade legacy, DSM emphasizes innovation, research, and problem-solving by integrating technical and managerial skills. Through its Triple E approach—Education, Experience, and Exposure—DSM prepares students for a knowledge-driven environment and strives to provide quality management education while contributing to an inclusive knowledge society.</p>
@@ -419,10 +417,7 @@
         <!-- Section 2 -->
         <div class="content-section reverse">
             <div class="section-image rotated-right">
-                <div class="image-placeholder">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <!-- Replace with actual image: <img src="images/classroom.jpg" alt="DSM Classroom"> -->
+                <img src="images/about/dtu.jpg" alt="DSM Classroom">
             </div>
             <div class="section-text">
                 <p>The curriculum is designed to meet the requirement of the present-day technology-intensive business functions. The students are equipped with management knowledge to deal with the complex global and dynamic business environment. Internships and field projects are an integral part of the curriculum. DSM also encourages students to form committees/forums which undertake different activities.</p>
@@ -432,10 +427,7 @@
         <!-- Section 3 -->
         <div class="content-section">
             <div class="section-image rotated-left">
-                <div class="image-placeholder">
-                    <i class="fas fa-building"></i>
-                </div>
-                <!-- Replace with actual image: <img src="images/campus.jpg" alt="DTU Campus"> -->
+                <img src="images/about/dtuuu.jpg" alt="DTU Campus">
             </div>
             <div class="section-text">
                 <p>The emphasis is on the right combination of classroom learning, hands-on experience in the corporate world and sharing the rich experience of the practitioners. In order to provide students with the required exposure, DSM brings them in close contact with the industry executives and eminent academicians through a series of lectures, sponsoring students to conferences and seminars, and facilitating their participation in papers/ case studies competitions. Overall DSM aims to develop and inculcate knowledge, skills and right attitude with responsibility, commitment, professionalism, moral & ethical standards amongst the students.</p>
@@ -449,10 +441,11 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="index.php">• Home</a></li>
                     <li><a href="about.php">• About Us</a></li>
-                    <li><a href="#">• Student Corner</a></li>
+                    <li><a href="student_life.php">• Student Corner</a></li>
                     <li><a href="admission_dtu.php">• Admission</a></li>
-                    <li><a href="#">• Placements</a></li>
+                    <li><a href="placements.php">• Placements</a></li>
                 </ul>
             </div>
             <div class="footer-section">

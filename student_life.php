@@ -230,6 +230,7 @@
             overflow: hidden;
             box-shadow: 0 3px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
         .event-card:hover {
@@ -383,11 +384,12 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <ul>
+            <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About Us</a></li>
             <li><a href="admission_dtu.php">Admission</a></li>
             <li><a href="placements.php">Placements</a></li>
             <li><a href="student_life.php" class="active">Student Corner</a></li>
-            <li><a href="#">Hostel</a></li>
+            <li><a href="https://hostels.dtu.ac.in/" target="_blank">Hostel</a></li>
             <li><a href="gallery.php">Gallery</a></li>
         </ul>
     </nav>
@@ -481,22 +483,22 @@
                 <div class="event-title">Club Activities</div>
             </div>
 
-            <div class="event-card">
+            <div class="event-card" onclick="window.location.href='student_profile.php'">
                 <div class="event-image">
                     <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #f39c12, #e67e22); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-lightbulb" style="font-size: 60px; color: white;"></i>
+                        <i class="fas fa-user-graduate" style="font-size: 60px; color: white;"></i>
                     </div>
                 </div>
-                <div class="event-title">Innovation Challenge</div>
+                <div class="event-title">Student Profile</div>
             </div>
 
-            <div class="event-card">
+            <div class="event-card" onclick="window.location.href='faculty.php'">
                 <div class="event-image">
                     <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #3498db, #2980b9); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-hands-helping" style="font-size: 60px; color: white;"></i>
+                        <i class="fas fa-chalkboard-teacher" style="font-size: 60px; color: white;"></i>
                     </div>
                 </div>
-                <div class="event-title">Social Service</div>
+                <div class="event-title">Faculty Page</div>
             </div>
         </div>
     </div>
@@ -507,6 +509,7 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="index.php">• Home</a></li>
                     <li><a href="about.php">• About Us</a></li>
                     <li><a href="student_life.php">• Student Corner</a></li>
                     <li><a href="admission_dtu.php">• Admission</a></li>

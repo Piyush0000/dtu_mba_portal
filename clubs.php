@@ -355,11 +355,12 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <ul>
+            <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About Us</a></li>
             <li><a href="admission_dtu.php">Admission</a></li>
             <li><a href="placements.php">Placements</a></li>
             <li><a href="student_life.php" class="active">Student Corner</a></li>
-            <li><a href="#">Hostel</a></li>
+            <li><a href="https://hostels.dtu.ac.in/" target="_blank">Hostel</a></li>
             <li><a href="gallery.php">Gallery</a></li>
         </ul>
     </nav>
@@ -416,6 +417,7 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="index.php">• Home</a></li>
                     <li><a href="about.php">• About Us</a></li>
                     <li><a href="student_life.php">• Student Corner</a></li>
                     <li><a href="admission_dtu.php">• Admission</a></li>
