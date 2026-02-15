@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delhi School of Management - DTU</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,9 +14,10 @@
         }
 
         body {
-            font-family: 'Source Sans Pro', Arial, sans-serif;
-            background: linear-gradient(to bottom, #e8f4f8 0%, #f5f5f5 100%);
+            font-family: 'Outfit', Arial, sans-serif;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
             min-height: 100vh;
+            color: #333;
         }
 
         /* Header Styles */
@@ -41,21 +42,23 @@
         }
 
         .university-info h1 {
-            font-size: 16px;
+            font-size: 20px;
             color: #c0392b;
             font-weight: 700;
+            margin-bottom: 2px;
         }
 
         .university-info h2 {
-            font-size: 14px;
+            font-size: 16px;
             color: #2980b9;
             font-weight: 600;
+            margin-bottom: 5px;
         }
 
         .university-info p {
-            font-size: 11px;
+            font-size: 13px;
             color: #555;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .header-right {
@@ -112,6 +115,23 @@
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
         }
 
+        .apply-now-btn {
+            background: #e67e22;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: 2px solid #e67e22;
+        }
+
+        .apply-now-btn:hover {
+            background: white;
+            color: #e67e22;
+        }
+
         /* Navigation */
         .main-nav {
             background: linear-gradient(135deg, #3498db 0%, #5dade2 100%);
@@ -149,15 +169,37 @@
         .hero-slider {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 550px; /* Increased height for better visibility */
             overflow: hidden;
-            background: #000;
+            background: #111;
         }
 
         .slider-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            image-rendering: -webkit-optimize-contrast; 
+        }
+
+        .slider-image.active {
+            opacity: 1;
+        }
+
+        .slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+            pointer-events: none;
+            z-index: 2;
         }
 
         .slider-nav {
@@ -165,7 +207,14 @@
             right: 20px;
             top: 50%;
             transform: translateY(-50%);
-            background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .slider-btn {
+            background: rgba(255,255,255,0.7);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -174,6 +223,12 @@
             justify-content: center;
             cursor: pointer;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+
+        .slider-btn:hover {
+            background: white;
+            color: #e67e22;
         }
 
         /* Notice and Focus Section */
@@ -441,10 +496,11 @@
 
         /* Footer */
         .footer {
-            background: #5dade2;
+            background: #2c3e50;
             color: white;
-            padding: 30px 40px;
+            padding: 20px 40px;
             margin-top: 50px;
+            border-top: 5px solid #e67e22;
         }
 
         .footer-content {
@@ -456,10 +512,10 @@
         }
 
         .footer-section h4 {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 700;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            margin-bottom: 12px;
+            color: #e67e22;
         }
 
         .footer-section ul {
@@ -467,22 +523,22 @@
         }
 
         .footer-section li {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .footer-section a {
             color: white;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 15px;
         }
 
         .footer-section a:hover {
-            text-decoration: underline;
+            color: #e67e22;
         }
 
         .footer-section p {
-            font-size: 13px;
-            line-height: 1.5;
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         .footer-bottom {
@@ -555,7 +611,7 @@
         </div>
         <div class="header-right">
             <div class="search-box">
-                <input type="text" placeholder="Value">
+                <input type="text" placeholder="Search...">
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="social-icons">
@@ -582,11 +638,67 @@
 
     <!-- Hero Slider -->
     <div class="hero-slider">
-        <img src="images/home/hero_image.png" alt="Hero Image" class="slider-image">
+        <img src="images/portal/first.jpg" alt="DTU Campus" class="slider-image active">
+        <img src="images/portal/second.jpg" alt="DTU Infrastructure" class="slider-image">
+        <img src="images/portal/third.jpg" alt="Students at DTU" class="slider-image">
+        <img src="images/portal/fourth.jpg" alt="DSM DTU Campus" class="slider-image">
+        <div class="slider-overlay"></div>
         <div class="slider-nav">
-            <i class="fas fa-chevron-right"></i>
+            <div class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></div>
+            <div class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></div>
         </div>
     </div>
+
+    <script>
+        // Search Functionality
+        document.querySelector('.search-box button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const query = document.querySelector('.search-box input').value;
+            if(query) {
+                window.location.href = `search.php?q=${encodeURIComponent(query)}`;
+            }
+        });
+
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if(e.key === 'Enter') {
+                e.preventDefault();
+                const query = this.value;
+                if(query) {
+                    window.location.href = `search.php?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+
+        // Slider Functionality
+        const images = document.querySelectorAll('.slider-image');
+        let currentIdx = 0;
+
+        function showNext() {
+            images[currentIdx].classList.remove('active');
+            currentIdx = (currentIdx + 1) % images.length;
+            images[currentIdx].classList.add('active');
+        }
+
+        function showPrev() {
+            images[currentIdx].classList.remove('active');
+            currentIdx = (currentIdx - 1 + images.length) % images.length;
+            images[currentIdx].classList.add('active');
+        }
+
+        let slideInterval = setInterval(showNext, 5000);
+
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            clearInterval(slideInterval);
+            showNext();
+            slideInterval = setInterval(showNext, 5000);
+        });
+
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            clearInterval(slideInterval);
+            showPrev();
+            slideInterval = setInterval(showNext, 5000);
+        });
+    </script>
 
     <!-- Notice Board and Focus Section -->
     <div class="notice-focus-section">

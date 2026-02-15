@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admission - Delhi School of Management, DTU</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         }
 
         body {
-            font-family: 'Source Sans Pro', Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Outfit', Arial, sans-serif;
+            background-color: #f8f9fa;
         }
 
         /* Header Styles */
@@ -26,11 +26,6 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 3px solid #e67e22;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
         }
 
         .logo-section {
@@ -55,21 +50,21 @@
         }
 
         .university-info h1 {
-            font-size: 15px;
+            font-size: 20px;
             color: #8b0000;
             font-weight: 700;
         }
 
         .university-info h2 {
-            font-size: 13px;
+            font-size: 16px;
             color: #2980b9;
             font-weight: 600;
         }
 
         .university-info p {
-            font-size: 11px;
+            font-size: 13px;
             color: #555;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .header-right {
@@ -125,14 +120,27 @@
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
         }
 
+        .apply-now-btn {
+            background: #e67e22;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            transition: all 0.3s;
+            border: 2px solid #e67e22;
+        }
+
+        .apply-now-btn:hover {
+            background: white;
+            color: #e67e22;
+        }
+
         /* Navigation */
         .main-nav {
             background: linear-gradient(135deg, #3498db 0%, #5dade2 100%);
             padding: 0;
-            position: fixed;
-            top: 103px;
-            left: 0;
-            right: 0;
             z-index: 999;
         }
 
@@ -180,18 +188,17 @@
         /* Main Layout */
         .main-container {
             display: flex;
-            margin-top: 180px;
-            min-height: calc(100vh - 180px);
+            margin-top: 0;
+            min-height: calc(100vh - 200px);
         }
 
         /* Fixed Sidebar */
         .sidebar {
             width: 280px;
             background: #f0f0f0;
-            position: fixed;
-            top: 180px;
-            left: 0;
-            bottom: 0;
+            position: sticky;
+            top: 20px;
+            height: calc(100vh - 40px);
             overflow-y: auto;
             border-right: 1px solid #ddd;
             z-index: 100;
@@ -234,14 +241,37 @@
 
         .course-image {
             width: 100%;
-            height: 100px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 120px;
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 30px;
+            position: relative;
+            image-rendering: -webkit-optimize-contrast;
         }
+
+        .course-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .course-image i {
+            position: relative;
+            z-index: 1;
+        }
+
+        .course-card[data-course="mba-general"] .course-image { background-image: url('images/mba/geneeral.jpg'); }
+        .course-card[data-course="mba-ba"] .course-image { background-image: url('images/mba/ba.png'); }
+        .course-card[data-course="mba-iev"] .course-image { background-image: url('images/mba/iev.png'); }
+        .course-card[data-course="executive-mba"] .course-image { background-image: url('images/mba/executive.jpg'); }
 
         .course-card.active .course-image {
             background: linear-gradient(135deg, #3498db, #5dade2);
@@ -432,10 +462,11 @@
 
         /* Footer */
         .footer {
-            background: #5dade2;
+            background: #2c3e50;
             color: white;
-            padding: 25px 40px;
+            padding: 20px 40px;
             margin-left: 280px;
+            border-top: 5px solid #e67e22;
         }
 
         .footer-content {
@@ -445,10 +476,10 @@
         }
 
         .footer-section h4 {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 700;
             margin-bottom: 12px;
-            color: #2c3e50;
+            color: #e67e22;
         }
 
         .footer-section ul {
@@ -456,22 +487,22 @@
         }
 
         .footer-section li {
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
         .footer-section a {
             color: white;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 15px;
         }
 
         .footer-section a:hover {
-            text-decoration: underline;
+            color: #e67e22;
         }
 
         .footer-section p {
-            font-size: 12px;
-            line-height: 1.5;
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         .footer-bottom {
@@ -503,7 +534,7 @@
             }
             
             .main-nav {
-                top: 140px;
+                top: 0;
             }
             
             .nav-container {
@@ -559,7 +590,7 @@
         </div>
         <div class="header-right">
             <div class="search-box">
-                <input type="text" placeholder="Value">
+                <input type="text" placeholder="Search...">
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="social-icons">
@@ -622,7 +653,9 @@
         <!-- Scrollable Content Area -->
         <main class="content-area">
             <!-- MBA General Content -->
-            <div class="content-section active" id="mba-general">
+                <div class="apply-section" style="margin-bottom: 20px;">
+                    <button class="apply-btn-main" onclick="window.open('https://www.cmacadmissions.com/', '_blank')">Apply for MBA General</button>
+                </div>
                 <div class="info-card">
                     <div class="card-header">Master of Business Administration (FULL TIME) at DSM,DTU</div>
                     <div class="card-content">
@@ -697,6 +730,9 @@
 
             <!-- MBA-BA Content -->
             <div class="content-section" id="mba-ba">
+                <div class="apply-section" style="margin-bottom: 20px;">
+                    <button class="apply-btn-main" onclick="window.open('https://dtu.ac.in', '_blank')">Apply for MBA-BA</button>
+                </div>
                 <div class="info-card">
                     <div class="card-header">MBA - Business Analytics (MBA-BA) at DSM,DTU</div>
                     <div class="card-content">
@@ -767,6 +803,9 @@
 
             <!-- MBA-IEV Content -->
             <div class="content-section" id="mba-iev">
+                <div class="apply-section" style="margin-bottom: 20px;">
+                    <button class="apply-btn-main" onclick="window.open('https://dtu.ac.in', '_blank')">Apply for MBA-IEV</button>
+                </div>
                 <div class="info-card">
                     <div class="card-header">MBA - Innovation, Entrepreneurship & Venture Development (MBA-IEV) at DSM,DTU</div>
                     <div class="card-content">
@@ -836,6 +875,9 @@
 
             <!-- Executive MBA Content -->
             <div class="content-section" id="executive-mba">
+                <div class="apply-section" style="margin-bottom: 20px;">
+                    <button class="apply-btn-main" onclick="window.open('https://dtu.ac.in', '_blank')">Apply for Executive MBA</button>
+                </div>
                 <div class="info-card">
                     <div class="card-header">Executive MBA (Weekend Programme) at DSM,DTU</div>
                     <div class="card-content">
@@ -913,10 +955,11 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="index.php">• Home</a></li>
                     <li><a href="about.php">• About Us</a></li>
-                    <li><a href="#">• Student Corner</a></li>
+                    <li><a href="student_life.php">• Student Corner</a></li>
                     <li><a href="admission_dtu.php">• Admission</a></li>
-                    <li><a href="#">• Placements</a></li>
+                    <li><a href="placements.php">• Placements</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -936,6 +979,7 @@
         </div>
     </footer>
     <div class="footer-bottom"></div>
+
 
     <script>
         // Course card click functionality
@@ -958,6 +1002,25 @@
                 // Scroll to top of content area
                 document.querySelector('.content-area').scrollTop = 0;
             });
+        });
+
+        // Search Functionality
+        document.querySelector('.search-box button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const query = document.querySelector('.search-box input').value;
+            if(query) {
+                window.location.href = `search.php?q=${encodeURIComponent(query)}`;
+            }
+        });
+
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if(e.key === 'Enter') {
+                e.preventDefault();
+                const query = this.value;
+                if(query) {
+                    window.location.href = `search.php?q=${encodeURIComponent(query)}`;
+                }
+            }
         });
 
         // FAQ toggle functionality

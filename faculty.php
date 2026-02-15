@@ -395,7 +395,7 @@
         </div>
         <div class="header-right">
             <div class="search-box">
-                <input type="text" placeholder="Value">
+                <input type="text" placeholder="Search...">
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="social-icons">
@@ -520,5 +520,25 @@
         </div>
     </footer>
     <div class="footer-bottom"></div>
+    <script>
+        // Search Functionality
+        document.querySelector('.search-box button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const query = document.querySelector('.search-box input').value;
+            if(query) {
+                window.location.href = `search.php?q=${encodeURIComponent(query)}`;
+            }
+        });
+
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if(e.key === 'Enter') {
+                e.preventDefault();
+                const query = this.value;
+                if(query) {
+                    window.location.href = `search.php?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+    </script>
 </body>
 </html>

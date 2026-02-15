@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Life at DSM - Delhi School of Management</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,9 +14,10 @@
         }
 
         body {
-            font-family: 'Source Sans Pro', Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Outfit', Arial, sans-serif;
+            background-color: #f8f9fa;
             min-height: 100vh;
+            color: #333;
         }
 
         /* Header Styles */
@@ -50,21 +51,21 @@
         }
 
         .university-info h1 {
-            font-size: 16px;
+            font-size: 20px;
             color: #c0392b;
             font-weight: 700;
         }
 
         .university-info h2 {
-            font-size: 14px;
+            font-size: 16px;
             color: #2980b9;
             font-weight: 600;
         }
 
         .university-info p {
-            font-size: 11px;
+            font-size: 13px;
             color: #555;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .header-right {
@@ -119,6 +120,23 @@
         .social-icons a.linkedin { background: #0077b5; }
         .social-icons a.instagram { 
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .apply-now-btn {
+            background: #e67e22;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: 2px solid #e67e22;
+        }
+
+        .apply-now-btn:hover {
+            background: white;
+            color: #e67e22;
         }
 
         /* Navigation */
@@ -260,10 +278,11 @@
 
         /* Footer */
         .footer {
-            background: #5dade2;
+            background: #2c3e50;
             color: white;
-            padding: 30px 40px;
+            padding: 20px 40px;
             margin-top: 50px;
+            border-top: 5px solid #e67e22;
         }
 
         .footer-content {
@@ -275,10 +294,10 @@
         }
 
         .footer-section h4 {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 700;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            margin-bottom: 12px;
+            color: #e67e22;
         }
 
         .footer-section ul {
@@ -286,22 +305,22 @@
         }
 
         .footer-section li {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .footer-section a {
             color: white;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 15px;
         }
 
         .footer-section a:hover {
-            text-decoration: underline;
+            color: #e67e22;
         }
 
         .footer-section p {
-            font-size: 13px;
-            line-height: 1.5;
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         .footer-bottom {
@@ -369,7 +388,7 @@
         </div>
         <div class="header-right">
             <div class="search-box">
-                <input type="text" placeholder="Value">
+                <input type="text" placeholder="Search...">
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="social-icons">
@@ -535,6 +554,25 @@
     <div class="footer-bottom"></div>
 
     <script>
+        // Search Functionality
+        document.querySelector('.search-box button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const query = document.querySelector('.search-box input').value;
+            if(query) {
+                window.location.href = `search.php?q=${encodeURIComponent(query)}`;
+            }
+        });
+
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if(e.key === 'Enter') {
+                e.preventDefault();
+                const query = this.value;
+                if(query) {
+                    window.location.href = `search.php?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+
         function updateMonth() {
             const select = document.getElementById('monthSelect');
             const display = document.getElementById('monthDisplay');
