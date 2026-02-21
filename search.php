@@ -12,6 +12,7 @@ $pages = [
     'clubs.php' => 'Clubs and Societies'
 ];
 
+
 $results = [];
 
 if (!empty($query)) {
@@ -85,12 +86,7 @@ if (!empty($query)) {
         .no-results { text-align: center; padding: 50px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .no-results i { font-size: 50px; color: #bdc3c7; margin-bottom: 20px; }
 
-        /* Footer */
-        .footer { background: #2c3e50; color: white; padding: 40px; margin-top: 50px; border-top: 5px solid #e67e22; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-        .footer-section h4 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: #e67e22; }
-        .footer-section a { color: white; text-decoration: none; font-size: 14px; display: block; margin-bottom: 8px; }
-        .footer-section a:hover { color: #e67e22; }
+        /* footer css handled by footer.php */
     </style>
 </head>
 <body>
@@ -145,16 +141,7 @@ if (!empty($query)) {
         <?php endif; ?>
     </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="index.php">• Home</a>
-                <a href="about.php">• About Us</a>
-                <a href="admission_dtu.php">• Admission</a>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 
     <script>
         document.getElementById('searchBtn').addEventListener('click', function() {

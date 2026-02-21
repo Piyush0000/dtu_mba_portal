@@ -284,5 +284,6 @@
             <button type="submit" class="btn">Submit Application</button>
         </form>
     </div>
+    <?php include 'footer.php'; ?>
 </body>
 </html>

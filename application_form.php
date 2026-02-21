@@ -772,5 +772,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             submitBtn.disabled = true;
         });
     </script>
+    <?php include 'footer.php'; ?>
 </body>
 </html>
